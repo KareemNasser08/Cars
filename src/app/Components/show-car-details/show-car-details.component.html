@@ -1,0 +1,22 @@
+<div class="container-fluid mt-4" *ngIf="carData">
+    <div class="text-center">
+        <button class="btn btn-outline-dark text-uppercase">Why Choose Us</button>
+    </div>
+    <div class="row h-100 mt-3">
+        <div class="col-md-6 imgcontainer">
+            <img src="assets/Audi 1.png" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <div class="my-4">
+                <span class="fs-3 fw-semibold">{{carData.make}} / {{carData.model}}</span>
+            </div>
+            <hr>
+            <p>Car Model Year : <strong class="text-success">{{carData.year}}</strong></p>
+            <p>Car Engine: <strong class="text-success">{{carData.engine}}</strong></p>    
+            <p>Car Transmission: <strong class="text-success">{{carData.transmission}}</strong></p>
+            <p>Car Fuel Type: <strong class="text-success">{{carData.fuelType}}</strong></p>
+            <p>Car Owners: <strong class="text-success">{{carData.owners}}</strong></p>
+
+        </div>
+    </div>
+</div>

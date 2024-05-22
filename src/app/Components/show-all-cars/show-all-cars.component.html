@@ -1,0 +1,61 @@
+<div class="container">
+    <nav aria-label="breadcrumb" class="my-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/rentaldeals">Popular Rental</a></li>
+            <li class="breadcrumb-item text-muted" aria-current="page">All Cars</li>
+        </ol>
+    </nav>
+    <div class="row" *ngIf="allCars.length>0">
+        <div class="col-md-4 my-2 mx-auto" *ngFor="let car of allCars" style="width: 20rem;" #CarSelected>
+            <div class="card shadow p-2">
+                <img src="assets/car1.png" class="card-img-top py-4 px-2" alt="...">
+                <div class="card-body my-2">
+                    <h5 class="card-title">{{car.make}} / {{car.model}}</h5>
+                    <p class="card-text fw-semibold">
+                        <i class="fa-solid fa-star text-warning"></i> 4.6 <span class="text-muted">(1345 reviews)</span>
+                    </p>
+                </div>
+                <div class="row justify-content-between align-items-center px-2">
+                    <div class="col-md-6">
+                        <i class="fa-regular fa-user me-1"></i><span class="text-muted"><small>2
+                                Passanger</small></span>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="fa-regular fa-snowflake me-1"></i><span class="text-muted"><small>Air
+                                Condition</small></span>
+                    </div>
+                </div>
+                <div class="row justify-content-between align-items-center my-1 px-2">
+                    <div class="col-md-6">
+                        <i class="fa-regular fa-calendar-days me-1"></i><span
+                            class="text-muted"><small>{{car.year}}</small></span>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="fa-solid fa-code-branch me-1"></i><span
+                            class="text-muted"><small>{{car.transmission}}</small></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-between align-items-center mb-1 px-2">
+                    <div class=" col-md-5">
+                        <span class="text-muted">Price</span>
+                    </div>
+                    <div class=" col-md-7">
+                        <!--  -->
+                        <i class="fa-solid fa-dollar-sign me-1"></i><span
+                            class="text-muted"><strong>{{car.price}}</strong>/ Per
+                            day</span>
+                    </div>
+                </div>
+                <div class="row w-100 m-auto px-2">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary col-12" [routerLink]="['/showcardetails', car.id]">
+                        View all details
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
