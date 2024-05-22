@@ -13,6 +13,7 @@ import { HowItWorkComponent } from './Components/how-it-work/how-it-work.compone
 import { WhyChooseUsComponent } from './Components/why-choose-us/why-choose-us.component';
 import { ShowAllCarsComponent } from './Components/show-all-cars/show-all-cars.component';
 import { ShowCarDetailsComponent } from './Components/show-car-details/show-car-details.component';
+import { TestimonialsComponent } from './Components/testimonials/testimonials.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ShowCarDetailsComponent } from './Components/show-car-details/show-car-
     WhyChooseUsComponent,
     ShowAllCarsComponent,
     ShowCarDetailsComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,
